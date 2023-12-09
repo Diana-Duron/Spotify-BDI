@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "e55ffa11-77fa-4647-96ae-ac0b895b19c7",
+		"name": "Spotify BDI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20637389",
+		"_collection_link": "https://winter-resonance-393648.postman.co/workspace/New-Team-Workspace~2e148075-53fd-4fd3-bcbc-a512b908c1d6/collection/20637389-e55ffa11-77fa-4647-96ae-ac0b895b19c7?action=share&source=collection_link&creator=20637389"
+	},
+	"item": [
+		{
+			"name": "getUsuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "getUsuariobyCodigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/usuario/31"
+			},
+			"response": []
+		},
+		{
+			"name": "registrarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Juanita\",\r\n    \"apellido\": \"Palmeiro\",\r\n    \"correo\": \"jpalmerio@email.com\",\r\n    \"fechaNacimiento\": \"1993-07-09\"\r\n}"
+				},
+				"url": "192.168.196.128:3000/api/usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "getArtistas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/artistas"
+			},
+			"response": []
+		},
+		{
+			"name": "getArtistasByCodigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/artista/24"
+			},
+			"response": []
+		},
+		{
+			"name": "getAlbumesByArtista",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/artista/24/albumes"
+			},
+			"response": []
+		},
+		{
+			"name": "getCancionesByArtista",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/artista/24/canciones"
+			},
+			"response": []
+		},
+		{
+			"name": "getPodcasters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/podcasters"
+			},
+			"response": []
+		},
+		{
+			"name": "getPlaylists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/playlists"
+			},
+			"response": []
+		},
+		{
+			"name": "getPlaylist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/playlist/2"
+			},
+			"response": []
+		},
+		{
+			"name": "getPodcasts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/podcast/25"
+			},
+			"response": []
+		},
+		{
+			"name": "getPodcast",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/podcast/25"
+			},
+			"response": []
+		},
+		{
+			"name": "getCanciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/canciones"
+			},
+			"response": []
+		},
+		{
+			"name": "getCancionById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "192.168.196.128:3000/api/cancion/22"
+			},
+			"response": []
+		},
+		{
+			"name": "crearPlaylist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Rolas Justincito\"\r\n}"
+				},
+				"url": "192.168.196.128:3000/api/playlist/"
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarPlaylist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Rolas Justincito\"\r\n}"
+				},
+				"url": "192.168.196.128:3000/api/playlist/2"
+			},
+			"response": []
+		},
+		{
+			"name": "borrarPlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "192.168.196.128:3000/api/playlist/1"
+			},
+			"response": []
+		},
+		{
+			"name": "agregarCancionPlaylist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCancion\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "192.168.196.128:3000/api/playlist/2/song"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarCancionPlaylist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCancion\": 23\r\n}"
+				},
+				"url": "192.168.196.128:3000/api/playlist/2/song"
+			},
+			"response": []
+		}
+	]
+}
